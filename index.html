@@ -12,6 +12,6 @@
 <body>
   <h1>This site imitates the "save page as" function.</h1><br><h3>It probably won't work on Safari.</h3>
   <input id="URL" type="text" placeholder="URL" onchange="update()">
-  <a id="dl">Download</a>
+  <a id="dl" onclick="document.getElementById('URL').value=''">Download</a>
 </body>
 </html>
