@@ -4,14 +4,13 @@
   <script>
     function update() {
       var url = document.getElementById("URL").value.replace(/\/$/, "");
-      alert(url);
       var filename = url.match(/\/[^\/]*$/i)[0].replace(/\//gi, "");
-      alert(filename);
       if (!/\./.test(filename)) {
         filename = filename + ".html";
       }
       document.getElementById("dl").download = filename;
       document.getElementById("dl").href = url;
+      alert(document.getElementById("dl").download);
     }
   </script>
 </head>
