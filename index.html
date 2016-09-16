@@ -3,8 +3,8 @@
   <title>Download urls to your phone!</title>
   <script>
     function update() {
-      var url = document.getElementById("URL").value;
-      var filename = url.match(/\/[^\/]*(\/$|$)/i)[0].replace(/\//gi, "");
+      var url = document.getElementById("URL").value.replace(/\/$/, "");
+      var filename = url.match(/\/[^\/]*$/i)[0].replace(/\//gi, "");
       if (!/\./.test(filename)) {
         filename = filename + ".html";
       }
