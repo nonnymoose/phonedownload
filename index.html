@@ -5,7 +5,11 @@
     function update() {
       var url = document.getElementById("URL").value;
       var filename = url.match(/(?<=\/)[^\/]*$/i)[0];
-      if (/\./.test(filename))
+      if (!/\./.test(filename)) {
+        filename = filename + ".html";
+      }
+      document.getElementById("dl").download = filename;
+      document.getElementById("dl").href = url;
     }
   </script>
 </head>
