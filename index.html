@@ -1,3 +1,17 @@
 <html>
-
+<head>
+  <title>Download urls to your phone!</title>
+  <script>
+    function update() {
+      var url = document.getElementById("URL").value;
+      var filename = url.match(/(?<=\/)[^\/]*$/i)[0];
+      if (/\./.test(filename))
+    }
+  </script>
+</head>
+<body>
+  <h1>This site imitates the "save page as" function.</h1><br><h3>It probably won't work on Safari.</h3>
+  <input id="URL" type="text" placeholder="URL" onchange="update()">
+  <a id="dl">Download</a>
+</body>
 </html>
